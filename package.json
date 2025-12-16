@@ -1,22 +1,43 @@
 {
-  "name": "my-storybook",
-  "private": true,
+  "name": "nb-custom-components",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "keywords": [
+    "react",
+    "dev",
+    "NextBale"
+  ],
+  "license": "MIT",
+  "homepage": "https://nextbale.com",
+  "repository": {
+    "url": "https://https://github.com/dieginin/nb-custom-components",
+    "type": "github"
+  },
+  "files": [
+    "dist/"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "scripts": {
     "dev": "yarn storybook",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_d80787d223d910b"
   },
-  "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "devDependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "@eslint/js": "^9.39.1",
     "@storybook/addon-docs": "10.1.9",
     "@storybook/react-vite": "^10.1.9",
