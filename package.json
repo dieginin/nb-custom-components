@@ -24,20 +24,19 @@
   },
   "scripts": {
     "dev": "yarn storybook",
-    "build": "tsc -b",
+    "build": "yarn clean && tsc -b",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_d80787d223d910b"
+    "chromatic": "npx chromatic --project-token=chpt_d80787d223d910b",
+    "clean": "rimraf dist/"
   },
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
   "devDependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
     "@eslint/js": "^9.39.1",
     "@storybook/addon-docs": "10.1.9",
     "@storybook/react-vite": "^10.1.9",
@@ -51,6 +50,9 @@
     "eslint-plugin-react-refresh": "^0.4.24",
     "eslint-plugin-storybook": "^10.1.9",
     "globals": "^16.5.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "rimraf": "^6.1.2",
     "storybook": "^10.1.9",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
